@@ -3,7 +3,7 @@ variable "instance_type" {
   default     = "t3.nano"
 }
 
-vairable "ami_filter" {
+variable "ami_filter" {
   description = "Name filter and owner for AMI"
 
   type = object({
@@ -34,10 +34,10 @@ variable "environment" {
 
 variable "asg_min_size" {
   description = "Minimum number of instances in the ASG"
-  min_size    = 1
+  default    = 1
 }
 
 variable "asg_max_size" {
   description = "Maximum number of instances in the ASG"
-  max_size    = 2
+  default    = 2
 }
